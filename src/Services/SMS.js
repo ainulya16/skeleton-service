@@ -1,17 +1,10 @@
-import WhispirSDK from 'whispir-node-sdk';
-
-const whispirAPI = new WhispirSDK(
-  process.env.WHISPIR_USERNAME,
-  process.env.WHISPIR_PASSWORD,
-  process.env.WHISPIR_API_KEY
-);
-
 const whispirSMS = params => {
-  return new Promise((resolve, reject) => {
-    whispirAPI
-      .SMS(params)
-      .send()
-      .then(resolve, reject);
+  return new Promise(resolve => {
+    console.log(params);
+    /**
+     *  Create your own function
+     */
+    resolve();
   });
 };
 
